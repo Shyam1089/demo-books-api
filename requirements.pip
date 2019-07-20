@@ -1,0 +1,9 @@
+flask==1.0.2
+requests==2.19.1
+flask_api==1.1
+flake8>=3.5.0,<3.6
+marshmallow==3.0.0b12
+flask-sqlalchemy
+pytest==3.6.1
+pytest-cov==2.5.1
+mock==2.0.0
