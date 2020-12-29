@@ -3,7 +3,7 @@
 This application requires docker to run locally. Refer to the installation docs [Docker Installation docs](https://docs.docker.com/install/) for installation:
 
 
-### Running Application Locally
+### Running the Application Locally
 
 Once docker is installed, then simply clone the repository into your local environment. 
 ```sh
