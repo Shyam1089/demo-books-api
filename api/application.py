@@ -46,7 +46,7 @@ with app.app_context():
 
 JSON_TYPE_HEADERS = {'Content-Type': 'application/json'}
 SUCCESS_RESPONSE = {"status": "success", "status_code": status.HTTP_200_OK }
-BOOK_KEYS = ["name", "isbn", "authors", "number_of_pages", "publisher", "country", "release_date"]
+BOOK_KEYS = ["name", "isbn", "authors",  "number_of_pages", "publisher", "country", "release_date"]
 
 
 @app.errorhandler(404)
