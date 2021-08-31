@@ -2,7 +2,6 @@ FROM python:alpine3.7
 
 RUN apk add --update --no-cache g++=6.4.0-r5 \
  gcc=6.4.0-r5 \
- libxslt-dev=1.1.31-r1 \
  build-base=0.5-r0 \
  linux-headers=4.4.6-r2
 
