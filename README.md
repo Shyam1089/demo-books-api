@@ -21,7 +21,7 @@ This will create an docker image locally. To run the application locally run the
 ```sh
 $ docker run -d -p 8080:8080 demo-api
 ```
-The app will be running locally on port 8080, and then the enpoints can be accessed then.
+The app will be running locally on port 8080, and then the enpoints can be accessed then
 
 
 ### Run Unit Test and Find Code Coverage
