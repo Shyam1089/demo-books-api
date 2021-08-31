@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "demo-api"
+  namespace: "default"
+  labels:
+    app: "demo-api"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "demo-api"
+  template:
+    metadata:
+      labels:
+        app: "demo-api"
+    spec:
+      containers:
+      - name: "demo-books-api-1"
+        image: "gcr.io/endless-memento-324615/github.com/shyam1089/demo-books-api:$SHORT_SHA"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "demo-api-hpa-h46y"
+  namespace: "default"
+  labels:
+    app: "demo-api"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "demo-api"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
